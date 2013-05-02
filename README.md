@@ -20,10 +20,10 @@ then
 ## In CouchDB
 
 Just drop the `src/normalize.js` contents into your CouchDB design document -- for example, into
-`{views: {lib: {normalizer: "JSON-ENCODED src/normalize.js CODE HERE"}}}`, and then `require` it
+`{views: {lib: {normalize: "JSON-ENCODED src/normalize.js CODE HERE"}}}`, and then `require` it
 elsewhere:
 
-    var normalizeForSearch = require("views/lib/normalizer")["normalize-for-search"];
+    var normalizeForSearch = require("views/lib/normalize");
 
 ## In the browser
 
