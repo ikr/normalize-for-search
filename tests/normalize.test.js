@@ -17,6 +17,10 @@
             assert.strictEqual(normalizeForSearch("ö"), "o");
         });
 
+        it("normalizes ô", function () {
+            assert.strictEqual(normalizeForSearch("ô"), "o");
+        });
+
         it("normalizes ü", function () {
             assert.strictEqual(normalizeForSearch("ü"), "u");
         });

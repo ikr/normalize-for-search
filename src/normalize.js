@@ -25,6 +25,7 @@
                 case "ö":
                 case "ó":
                 case "õ":
+                case "ô":
                     return "o";
 
                 case "ś":
