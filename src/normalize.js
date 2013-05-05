@@ -5,6 +5,8 @@
             return Array.prototype.map.call(s.toLowerCase(), function (c) {
                 switch (c) {
                 case "ä":
+                    return "ae";
+
                 case "á":
                 case "à":
                 case "ã":
@@ -23,6 +25,8 @@
                     return "i";
 
                 case "ö":
+                    return "oe";
+
                 case "ó":
                 case "õ":
                 case "ô":
@@ -33,6 +37,8 @@
                     return "s";
 
                 case "ü":
+                    return "ue";
+
                 case "ú":
                     return "u";
 

@@ -10,11 +10,11 @@
         });
 
         it("normalizes ä", function () {
-            assert.strictEqual(normalizeForSearch("ä"), "a");
+            assert.strictEqual(normalizeForSearch("ä"), "ae");
         });
 
         it("normalizes ö", function () {
-            assert.strictEqual(normalizeForSearch("ö"), "o");
+            assert.strictEqual(normalizeForSearch("ö"), "oe");
         });
 
         it("normalizes ô", function () {
@@ -22,7 +22,7 @@
         });
 
         it("normalizes ü", function () {
-            assert.strictEqual(normalizeForSearch("ü"), "u");
+            assert.strictEqual(normalizeForSearch("ü"), "ue");
         });
 
         it("normalizes ё", function () {
@@ -32,7 +32,7 @@
         it("satisfies the end-to-end test from the README", function () {
             assert.strictEqual(
                 normalizeForSearch("Dät ist naïve und ÜBERCOOL, ё-маё!"),
-                "dat ist naive und ubercool, е-мае!"
+                "daet ist naive und uebercool, е-мае!"
             );
         });
     });
