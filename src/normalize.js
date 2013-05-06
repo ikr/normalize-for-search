@@ -42,6 +42,9 @@
                 case "ú":
                     return "u";
 
+                case "ß":
+                    return "ss";
+
                 case "ё":
                     return "е";
 

@@ -25,6 +25,10 @@
             assert.strictEqual(normalizeForSearch("ü"), "ue");
         });
 
+        it("normalizes ß", function () {
+            assert.strictEqual(normalizeForSearch("Straße"), "strasse");
+        });
+
         it("normalizes ё", function () {
             assert.strictEqual(normalizeForSearch("ё"), "е");
         });
