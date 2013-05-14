@@ -1,6 +1,6 @@
 {
   "name": "normalize-for-search",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "main": "src/normalize.js",
   "ignore": [
     "**/.*",
