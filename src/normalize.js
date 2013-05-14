@@ -54,13 +54,8 @@
             }).join("");
         };
 
-    if (typeof exports !== "undefined") {
-        if (typeof module !== "undefined" && module.exports) {
-            module.exports = normalizeForSearch;
-        }
-        else {
-            exports["normalize-for-search"] = normalizeForSearch;
-        }
+    if (typeof module !== "undefined" && module.exports) {
+        module.exports = normalizeForSearch;
     }
     else {
         window["normalize-for-search"] = normalizeForSearch;
