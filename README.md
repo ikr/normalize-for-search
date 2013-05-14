@@ -25,7 +25,7 @@ elsewhere:
 
     var normalizeForSearch = require('views/lib/normalize');
 
-## In the browser
+## In the browser, with AngularJS
 
     $ bower install --save normalize-for-search
 
@@ -34,8 +34,14 @@ then
     <script src="/components/normalize-for-search/src/normalize.js"></script>
 
     <script>
-        var normalizeForSearch = window['normalize-for-search'];
+        var injector = angular.injector(['normalizeForSearch']);
+        injector.invoke(function (normalizeForSearchFilter) { ... });
     </script>
+
+    <p>{{ text | normalizeForSearch }}</p>
+
+Thus, the Angular module `normalizeForSearch` declares a filter function available both in the
+HTML partials, and in the controllers' code.
 
 # API
 

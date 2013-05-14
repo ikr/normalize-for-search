@@ -57,7 +57,9 @@
     if (typeof module !== 'undefined' && module.exports) {
         module.exports = normalizeForSearch;
     }
-    else {
-        window['normalize-for-search'] = normalizeForSearch;
+    else if (typeof angular !== 'undefined' && angular.module) {
+        angular.module('normalizeForSearch', []).filter('normalizeForSearch', function () {
+            return normalizeForSearch;
+        });
     }
 }(this));
