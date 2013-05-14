@@ -15,15 +15,15 @@ expects the passed strings being already Unicode-normalized.
 
 then
 
-    var normalizeForSearch = require("normalize-for-search");
+    var normalizeForSearch = require('normalize-for-search');
 
 ## In CouchDB
 
 Just drop the `src/normalize.js` contents into your CouchDB design document -- for example, into
-`{views: {lib: {normalize: "JSON-ENCODED src/normalize.js CODE HERE"}}}`, and then `require` it
+`{views: {lib: {normalize: 'JSON-ENCODED src/normalize.js CODE HERE'}}}`, and then `require` it
 elsewhere:
 
-    var normalizeForSearch = require("views/lib/normalize");
+    var normalizeForSearch = require('views/lib/normalize');
 
 ## In the browser
 
@@ -39,8 +39,8 @@ then
 
 # API
 
-    normalizeForSearch("Dät ist naïve und ÜBERCOOL, ё-маё!");
-    // Results in "dat ist naive und ubercool, е-мае!"
+    normalizeForSearch('Dät ist naïve und ÜBERCOOL, ё-маё!');
+    // Results in 'dat ist naive und ubercool, е-мае!'
 
 # License: MIT
 

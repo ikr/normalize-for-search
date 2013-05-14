@@ -1,63 +1,63 @@
 (function (window, undefined) {
-    "use strict";
+    'use strict';
 
     var normalizeForSearch = function (s) {
             return Array.prototype.map.call(s.toLowerCase(), function (c) {
                 switch (c) {
-                case "ä":
-                    return "ae";
+                case 'ä':
+                    return 'ae';
 
-                case "á":
-                case "à":
-                case "ã":
-                    return "a";
+                case 'á':
+                case 'à':
+                case 'ã':
+                    return 'a';
 
-                case "ç":
-                case "č":
-                    return "c";
+                case 'ç':
+                case 'č':
+                    return 'c';
 
-                case "é":
-                case "ê":
-                    return "e";
+                case 'é':
+                case 'ê':
+                    return 'e';
 
-                case "ï":
-                case "í":
-                    return "i";
+                case 'ï':
+                case 'í':
+                    return 'i';
 
-                case "ö":
-                    return "oe";
+                case 'ö':
+                    return 'oe';
 
-                case "ó":
-                case "õ":
-                case "ô":
-                    return "o";
+                case 'ó':
+                case 'õ':
+                case 'ô':
+                    return 'o';
 
-                case "ś":
-                case "š":
-                    return "s";
+                case 'ś':
+                case 'š':
+                    return 's';
 
-                case "ü":
-                    return "ue";
+                case 'ü':
+                    return 'ue';
 
-                case "ú":
-                    return "u";
+                case 'ú':
+                    return 'u';
 
-                case "ß":
-                    return "ss";
+                case 'ß':
+                    return 'ss';
 
-                case "ё":
-                    return "е";
+                case 'ё':
+                    return 'е';
 
                 default:
                     return c;
                 }
-            }).join("");
+            }).join('');
         };
 
-    if (typeof module !== "undefined" && module.exports) {
+    if (typeof module !== 'undefined' && module.exports) {
         module.exports = normalizeForSearch;
     }
     else {
-        window["normalize-for-search"] = normalizeForSearch;
+        window['normalize-for-search'] = normalizeForSearch;
     }
 }(this));
