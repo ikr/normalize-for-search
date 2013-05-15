@@ -33,6 +33,10 @@
             assert.strictEqual(normalizeForSearch('ё'), 'е');
         });
 
+        it('normalizes è', function () {
+            assert.strictEqual(normalizeForSearch('è'), 'e');
+        });
+
         it('satisfies the end-to-end test from the README', function () {
             assert.strictEqual(
                 normalizeForSearch('Dät ist naïve und ÜBERCOOL, ё-маё!'),

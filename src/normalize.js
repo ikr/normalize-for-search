@@ -18,6 +18,7 @@
 
                 case 'é':
                 case 'ê':
+                case 'è':
                     return 'e';
 
                 case 'ï':
