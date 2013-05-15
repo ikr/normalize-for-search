@@ -13,6 +13,10 @@
             assert.strictEqual(normalizeForSearch('ä'), 'ae');
         });
 
+        it('normalizes â', function () {
+            assert.strictEqual(normalizeForSearch('â'), 'a');
+        });
+
         it('normalizes ö', function () {
             assert.strictEqual(normalizeForSearch('ö'), 'oe');
         });
