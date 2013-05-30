@@ -1,6 +1,6 @@
 # About
 
-Un-accents and un-umlauts charecters in a string. Also preliminary converts the string to lower
+Un-accents and un-umlauts characters in a string. Also preliminary converts the string to lower
 case. We use it for autocomplete: both for the matched strings -- on the server side, when indexing;
 and for the strings the user types into a text input in the browser.
 
