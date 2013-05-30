@@ -2,7 +2,12 @@
     'use strict';
 
     var normalizeForSearch = function (s) {
-            return Array.prototype.map.call(s.toLowerCase(), function (c) {
+
+        // Production steps of ECMA-262, Edition 5, 15.4.4.19
+        // Reference: http://es5.github.com/#x15.4.4.19
+        if(!Array.prototype.map){Array.prototype.map=function(e,t){var n,r,i;if(this==null){throw new TypeError(" this is null or not defined")}var s=Object(this);var o=s.length>>>0;if(typeof e!=="function"){throw new TypeError(e+" is not a function")}if(t){n=t}r=new Array(o);i=0;while(i<o){var u,a;if(i in s){u=s[i];a=e.call(n,u,i,s);r[i]=a}i++}return r}}
+
+        return Array.prototype.map.call(s.toLowerCase(), function (c) {
                 switch (c) {
                 case 'ä':
                     return 'ae';
