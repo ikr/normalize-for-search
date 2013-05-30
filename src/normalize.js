@@ -1,65 +1,100 @@
+/* jshint bitwise: false, maxcomplexity: 100 */
+
 (function (window, undefined) {
     'use strict';
 
     var normalizeForSearch = function (s) {
-
         // Production steps of ECMA-262, Edition 5, 15.4.4.19
         // Reference: http://es5.github.com/#x15.4.4.19
-        if(!Array.prototype.map){Array.prototype.map=function(e,t){var n,r,i;if(this==null){throw new TypeError(" this is null or not defined")}var s=Object(this);var o=s.length>>>0;if(typeof e!=="function"){throw new TypeError(e+" is not a function")}if(t){n=t}r=new Array(o);i=0;while(i<o){var u,a;if(i in s){u=s[i];a=e.call(n,u,i,s);r[i]=a}i++}return r}}
+        if (!Array.prototype.map) {
+            Array.prototype.map = function (callback, thisArg) {
+                var T, A, k, O, len, kValue, mappedValue;
+
+                if ((this === null) || (typeof this === 'undefined')) {
+                    throw new TypeError(' this is null or not defined');
+                }
+
+                O = Object(this);
+                len = O.length >>> 0;
+
+                if (typeof callback !== 'function') {
+                    throw new TypeError(callback + ' is not a function');
+                }
+
+                if (thisArg) {
+                    T = thisArg;
+                }
+
+                A = new Array(len);
+                k = 0;
+
+                while (k < len) {
+                    if (k in O) {
+                        kValue = O[k];
+                        mappedValue = callback.call(T, kValue, k, O);
+                        A[k] = mappedValue;
+                    }
+
+                    k = k + 1;
+                }
+
+                return A;
+            };
+        }
 
         return Array.prototype.map.call(s.toLowerCase(), function (c) {
-                switch (c) {
-                case 'ä':
-                    return 'ae';
+            switch (c) {
+            case 'ä':
+                return 'ae';
 
-                case 'á':
-                case 'à':
-                case 'ã':
-                case 'â':
-                    return 'a';
+            case 'á':
+            case 'à':
+            case 'ã':
+            case 'â':
+                return 'a';
 
-                case 'ç':
-                case 'č':
-                    return 'c';
+            case 'ç':
+            case 'č':
+                return 'c';
 
-                case 'é':
-                case 'ê':
-                case 'è':
-                    return 'e';
+            case 'é':
+            case 'ê':
+            case 'è':
+                return 'e';
 
-                case 'ï':
-                case 'í':
-                    return 'i';
+            case 'ï':
+            case 'í':
+                return 'i';
 
-                case 'ö':
-                    return 'oe';
+            case 'ö':
+                return 'oe';
 
-                case 'ó':
-                case 'õ':
-                case 'ô':
-                    return 'o';
+            case 'ó':
+            case 'õ':
+            case 'ô':
+                return 'o';
 
-                case 'ś':
-                case 'š':
-                    return 's';
+            case 'ś':
+            case 'š':
+                return 's';
 
-                case 'ü':
-                    return 'ue';
+            case 'ü':
+                return 'ue';
 
-                case 'ú':
-                    return 'u';
+            case 'ú':
+                return 'u';
 
-                case 'ß':
-                    return 'ss';
+            case 'ß':
+                return 'ss';
 
-                case 'ё':
-                    return 'е';
+            case 'ё':
+                return 'е';
 
-                default:
-                    return c;
-                }
-            }).join('');
-        };
+            default:
+                return c;
+            }
+        }).join('');
+    };
 
     if (typeof module !== 'undefined' && module.exports) {
         module.exports = normalizeForSearch;
