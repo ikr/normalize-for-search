@@ -1,10 +1,10 @@
 {
   "name": "normalize-for-search",
-  "version": "1.0.2",
-  "description": "Un-accents and un-umlauts charecters in a string. Also preliminary converts the string to lower case. We use it for autocomplete: both for the matched strings -- on the server side, when indexing; and for the strings the user types into a text input in the browser.",
+  "version": "1.0.3",
+  "description": "Un-accents and un-umlauts characters in a string. Also preliminary converts the string to lower case. We use it for autocomplete: both for the matched strings -- on the server side, when indexing; and for the strings the user types into a text input in the browser.",
   "main": "src/normalize.js",
   "scripts": {
-    "pretest": "jshint ./src ./tests ./package.json bower.json",
+    "pretest": "jshint ./src ./tests",
     "test": "mocha ./tests/*.test.js"
   },
   "repository": {
@@ -23,6 +23,7 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
+    "jshint": "~2.1.2",
     "mocha": "~1.9.0"
   }
 }

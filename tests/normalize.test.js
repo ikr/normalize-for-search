@@ -50,8 +50,8 @@
 
     describe('works normally', testCases);
 
-    describe('works in IE7/8', function() {
-        beforeEach(function(){
+    describe('works in IE7/8', function () {
+        beforeEach(function () {
             delete Array.prototype.map;
         });
 
