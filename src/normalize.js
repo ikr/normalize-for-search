@@ -3,9 +3,36 @@
 
     var normalizeForSearch = function (s) {
 
-        // Production steps of ECMA-262, Edition 5, 15.4.4.19
-        // Reference: http://es5.github.com/#x15.4.4.19
-        if(!Array.prototype.map){Array.prototype.map=function(e,t){var n,r,i;if(this==null){throw new TypeError(" this is null or not defined")}var s=Object(this);var o=s.length>>>0;if(typeof e!=="function"){throw new TypeError(e+" is not a function")}if(t){n=t}r=new Array(o);i=0;while(i<o){var u,a;if(i in s){u=s[i];a=e.call(n,u,i,s);r[i]=a}i++}return r}}
+        if(!Array.prototype.map) {
+            var breaker = {},
+                ObjProto = Object.prototype,
+                hasOwnProperty = ObjProto.hasOwnProperty,
+                has = function(obj, key) {
+                    return hasOwnProperty.call(obj, key);
+                },
+                each = function(obj, iterator, context) {
+                if (obj == null) return;
+                if (obj.length === +obj.length) {
+                    for (var i = 0, l = obj.length; i < l; i++) {
+                        if (iterator.call(context, obj[i], i, obj) === breaker) return;
+                    }
+                } else {
+                    for (var key in obj) {
+                        if (has(obj, key)) {
+                            if (iterator.call(context, obj[key], key, obj) === breaker) return;
+                        }
+                    }
+                }
+            };
+
+            Array.prototype.map = function(iterator, context) {
+                var results = [];
+                each(this, function(value, index, list) {
+                    results.push(iterator.call(context, value, index, list));
+                });
+                return results;
+            };
+        }
 
         return Array.prototype.map.call(s.toLowerCase(), function (c) {
                 switch (c) {
