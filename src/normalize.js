@@ -5,38 +5,7 @@
 
     var normalizeForSearch = function (s) {
 
-        if(!Array.prototype.map) {
-            var breaker = {},
-                ObjProto = Object.prototype,
-                hasOwnProperty = ObjProto.hasOwnProperty,
-                has = function(obj, key) {
-                    return hasOwnProperty.call(obj, key);
-                },
-                each = function(obj, iterator, context) {
-                if (obj == null) return;
-                if (obj.length === +obj.length) {
-                    for (var i = 0, l = obj.length; i < l; i++) {
-                        if (iterator.call(context, obj[i], i, obj) === breaker) return;
-                    }
-                } else {
-                    for (var key in obj) {
-                        if (has(obj, key)) {
-                            if (iterator.call(context, obj[key], key, obj) === breaker) return;
-                        }
-                    }
-                }
-            };
-
-            Array.prototype.map = function(iterator, context) {
-                var results = [];
-                each(this, function(value, index, list) {
-                    results.push(iterator.call(context, value, index, list));
-                });
-                return results;
-            };
-        }
-
-        return Array.prototype.map.call(s.toLowerCase(), function (c) {
+        function filter(c) {
             switch (c) {
             case 'ä':
                 return 'ae';
@@ -87,7 +56,14 @@
             default:
                 return c;
             }
-        }).join('');
+        }
+
+        var normalized = '', i, l;
+        s = s.toLowerCase();
+        for (i = 0, l = s.length; i < l; i = i + 1) {
+            normalized = normalized + filter(s.charAt(i));
+        }
+        return normalized;
     };
 
     if (typeof module !== 'undefined' && module.exports) {
