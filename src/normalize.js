@@ -1,4 +1,4 @@
-/* jshint bitwise: false, maxcomplexity: 100 */
+/* jshint maxcomplexity: 100 */
 
 (function (window, undefined) {
     'use strict';
