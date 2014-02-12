@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/ikr/normalize-for-search.png)](http://travis-ci.org/ikr/normalize-for-search)
+
 # About
 
 Un-accents and un-umlauts characters in a string. Also preliminary converts the string to lower
