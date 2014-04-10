@@ -60,7 +60,7 @@
 
         var normalized = '', i, l;
         s = s.toLowerCase();
-        for (i = 0 , l = s.length; i < l; i = i + 1) {
+        for (i = 0, l = s.length; i < l; i = i + 1) {
             normalized = normalized + filter(s.charAt(i));
         }
         return normalized;
