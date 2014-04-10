@@ -98,7 +98,9 @@
         "angular",
         "it",
         "describe",
-        "beforeEach"
+        "beforeEach",
+        "before",
+        "after"
     ],
     "indent"        : 4,        // Specify indentation spacing.
     "camelcase"     : true,     // Variable names to use either camelCase or UPPER_CASE style.
