@@ -9,14 +9,16 @@
             switch (c) {
             case 'ä':
                 return 'ae';
-
+            
+            case 'å':
+                return 'aa';
+            
             case 'á':
             case 'à':
             case 'ã':
             case 'â':
-            case 'å'
                 return 'a';
-
+        
             case 'ç':
             case 'č':
                 return 'c';
