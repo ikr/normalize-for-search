@@ -14,6 +14,7 @@
             case 'à':
             case 'ã':
             case 'â':
+            case 'å'
                 return 'a';
 
             case 'ç':
