@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/ikr/normalize-for-search.png)](http://travis-ci.org/ikr/normalize-for-search)
+[![Build Status](https://travis-ci.org/ikr/normalize-for-search.svg?branch=master)](https://travis-ci.org/ikr/normalize-for-search)
 
 # About
 
