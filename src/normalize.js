@@ -60,7 +60,7 @@
 
             case 'ё':
                 return 'е';
-                
+
             default:
                 return c;
             }
