@@ -51,7 +51,7 @@
             case 'ü':
                 return 'ue';
 
-            case 'ù'
+            case 'ù':
             case 'ú':
                 return 'u';
 
