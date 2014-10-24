@@ -7,6 +7,7 @@
 
         function filter(c) {
             switch (c) {
+            case 'æ':
             case 'ä':
                 return 'ae';
 
@@ -26,12 +27,15 @@
             case 'é':
             case 'ê':
             case 'è':
+            case 'ë':
                 return 'e';
 
+            case 'î':
             case 'ï':
             case 'í':
                 return 'i';
 
+            case 'œ':
             case 'ö':
                 return 'oe';
 
@@ -47,6 +51,7 @@
             case 'ü':
                 return 'ue';
 
+            case 'ù'
             case 'ú':
                 return 'u';
 
@@ -55,7 +60,7 @@
 
             case 'ё':
                 return 'е';
-
+                
             default:
                 return c;
             }
