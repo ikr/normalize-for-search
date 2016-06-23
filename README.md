@@ -34,11 +34,11 @@ Including `src/normalize.js` into a Web page will create a global `normalizeForS
 # API
 
     normalizeForSearch('Dät ist naïve und ÜBERCOOL, ё-маё!');
-    // Results in 'dat ist naive und ubercool, е-мае!'
+    // 'dat ist naive und ubercool, е-мае!'
 
 # License: MIT
 
-Copyright (c) 2013 Ivan Krechetov
+Copyright (c) 2016 Ivan Krechetov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
