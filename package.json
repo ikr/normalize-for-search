@@ -1,6 +1,6 @@
 {
   "name": "normalize-for-search",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Un-accents and un-umlauts characters in a string. Also preliminary converts the string to lower case. We use it for autocomplete: both for the matched strings -- on the server side, when indexing; and for the strings the user types into a text input in the browser.",
   "main": "src/normalize.js",
   "scripts": {
