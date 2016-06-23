@@ -27,7 +27,7 @@ elsewhere:
 
     var normalizeForSearch = require('views/lib/normalize');
 
-## Direct <script> in the browser
+## Directly in the browser
 
 Including `src/normalize.js` into a Web page will create a global `normalizeForSearch` function.
 
