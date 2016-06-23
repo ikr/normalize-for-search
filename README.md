@@ -11,7 +11,7 @@ expects the passed strings being already Unicode-normalized.
 
 # Installation
 
-## Under Node.js
+## NPM (Node.js, Browserify, Webpack)
 
     $ npm install --save normalize-for-search
 
@@ -19,7 +19,7 @@ then
 
     var normalizeForSearch = require('normalize-for-search');
 
-## In CouchDB
+## CouchDB
 
 Just drop the `src/normalize.js` contents into your CouchDB design document -- for example, into
 `{views: {lib: {normalize: 'JSON-ENCODED src/normalize.js CODE HERE'}}}`, and then `require` it
@@ -27,23 +27,9 @@ elsewhere:
 
     var normalizeForSearch = require('views/lib/normalize');
 
-## In the browser, with AngularJS
+## Direct <script> in the browser
 
-    $ bower install --save normalize-for-search
-
-then
-
-    <script src="/components/normalize-for-search/src/normalize.js"></script>
-
-    <script>
-        var injector = angular.injector(['normalizeForSearch']);
-        injector.invoke(function (normalizeForSearchFilter) { ... });
-    </script>
-
-    <p>{{ text | normalizeForSearch }}</p>
-
-Thus, the Angular module `normalizeForSearch` declares a filter function available both in the
-HTML partials, and in the controllers' code.
+Including `src/normalize.js` into a Web page will create a global `normalizeForSearch` function.
 
 # API
 
