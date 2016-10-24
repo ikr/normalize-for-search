@@ -36,7 +36,7 @@ Including `src/normalize.js` into a Web page will create a global `normalizeForS
     // String -> String
 
     normalizeForSearch('Dät ist naïve und ÜBERCOOL, ё-маё!');
-    // 'dat ist naive und ubercool, е-мае!'
+    // 'daet ist naive und uebercool, е-мае!'
 
 # License: MIT
 
