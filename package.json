@@ -22,9 +22,9 @@
   "author": "Ivan Krechetov <ivan.krechetov@gmail.com>",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "engine": "node >= 0.6",
+  "engine": "node >= 0.10",
   "devDependencies": {
-    "jshint": "~2.9.2",
-    "mocha": "~3.3.0"
+    "jshint": "^2.9.2",
+    "mocha": "^3.4.1"
   }
 }
