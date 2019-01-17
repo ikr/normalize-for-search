@@ -28,6 +28,7 @@
             case 'ê':
             case 'è':
             case 'ë':
+            case 'ē':
                 return 'e';
 
             case 'î':
@@ -53,6 +54,7 @@
 
             case 'ù':
             case 'ú':
+            case 'ŭ':
                 return 'u';
 
             case 'ß':
